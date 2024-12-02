@@ -1,0 +1,39 @@
+{
+    "name": "pwa 练习",
+    "short_name": "pwa 练习 short name",
+    "start_url": "/dist/PWA/index.html",
+    "description": "A readable Hacker News app.",
+    "display": "standalone",
+    "display_override ": [
+        "fullscreen",
+        "minimal-ui"
+    ],
+    "theme_color": "#000000",
+    "background_color": "peachpuff",
+    "icons": [
+        {
+            "src": "icon.webp",
+            "sizes": "48x48",
+            "type": "image/webp"
+        },
+        {
+            "src": "icon.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "./images/screenshot1.png",
+            "sizes": "540x669",
+            "type": "image/png",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "./images/screenshot2.jpg",
+            "sizes": "720x462",
+            "type": "image/jpg",
+            "form_factor": "wide"
+        }
+    ]
+}
