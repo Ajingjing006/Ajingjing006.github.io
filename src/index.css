@@ -99,7 +99,7 @@ body {
 
 .page-content .head-container .panel {
     margin-top: .24rem;
-    background: rgb(223, 86, 31);
+    background: rgb(117, 34, 211);
     padding: 1.46rem 0 .42rem;
     position: relative
 }
@@ -167,59 +167,43 @@ body {
 }
 
 .page-content .head-container .panel .zhan-yun-qi.popopo .node.node1 {
-    -webkit-animation: zhanyunqi 1.7s 1 ease-in-out;
-    animation: zhanyunqi 1.7s 1 ease-in-out;
-    -webkit-transform: translate(0, -2.19rem) scale(.7);
-    transform: translate(0, -2.19rem) scale(.7);
+    -webkit-animation: zhanyunqi 1.7s ease-in-out;
+    animation: zhanyunqi 1.7s ease-in-out;
 }
 
 .page-content .head-container .panel .zhan-yun-qi.popopo .node.node2 {
-    -webkit-animation: zhanyunqi 1.7s .25s 1 ease-in-out;
-    animation: zhanyunqi 1.7s .25s 1 ease-in-out;
-    -webkit-transform: translate(0, -2.19rem) scale(.7);
-    transform: translate(0, -2.19rem) scale(.7);
+    -webkit-animation: zhanyunqi 1.7s .25s ease-in-out;
+    animation: zhanyunqi 1.7s .25s ease-in-out;
 }
 
 .page-content .head-container .panel .zhan-yun-qi.popopo .node.node3 {
-    -webkit-animation: zhanyunqi 1.7s .5s 1 ease-in-out;
-    animation: zhanyunqi 1.7s .5s 1 ease-in-out;
-    -webkit-transform: translate(0, -2.19rem) scale(.7);
-    transform: translate(0, -2.19rem) scale(.7);
+    -webkit-animation: zhanyunqi 1.7s .5s ease-in-out;
+    animation: zhanyunqi 1.7s .5s ease-in-out;
 }
 
 .page-content .head-container .panel .zhan-yun-qi.popopo .node.node4 {
-    -webkit-animation: zhanyunqi 1.7s .75s 1 ease-in-out;
-    animation: zhanyunqi 1.7s .75s 1 ease-in-out;
-    -webkit-transform: translate(0, -2.19rem) scale(.7);
-    transform: translate(0, -2.19rem) scale(.7);
+    -webkit-animation: zhanyunqi 1.7s .75s ease-in-out;
+    animation: zhanyunqi 1.7s .75s ease-in-out;
 }
 
 .page-content .head-container .panel .zhan-yun-qi.popopo .node.node5 {
-    -webkit-animation: zhanyunqi 1.7s 1s 1 ease-in-out;
-    animation: zhanyunqi 1.7s 1s 1 ease-in-out;
-    -webkit-transform: translate(0, -2.19rem) scale(.7);
-    transform: translate(0, -2.19rem) scale(.7);
+    -webkit-animation: zhanyunqi 1.7s 1s ease-in-out;
+    animation: zhanyunqi 1.7s 1s ease-in-out;
 }
 
 .page-content .head-container .panel .zhan-yun-qi.popopo .node.node6 {
-    -webkit-animation: zhanyunqi 1.7s 1.25s 1 ease-in-out;
-    animation: zhanyunqi 1.7s 1.25s 1 ease-in-out;
-    -webkit-transform: translate(0, -2.19rem) scale(.7);
-    transform: translate(0, -2.19rem) scale(.7);
+    -webkit-animation: zhanyunqi 1.7s 1.25s ease-in-out;
+    animation: zhanyunqi 1.7s 1.25s ease-in-out;
 }
 
 .page-content .head-container .panel .zhan-yun-qi.popopo .node.node7 {
-    -webkit-animation: zhanyunqi 1.7s 1.5s 1 ease-in-out;
-    animation: zhanyunqi 1.7s 1.5s 1 ease-in-out;
-    -webkit-transform: translate(0, -2.19rem) scale(.7);
-    transform: translate(0, -2.19rem) scale(.7);
+    -webkit-animation: zhanyunqi 1.7s 1.5s ease-in-out;
+    animation: zhanyunqi 1.7s 1.5s ease-in-out;
 }
 
 .page-content .head-container .panel .zhan-yun-qi.popopo .node.node8 {
-    -webkit-animation: zhanyunqi 1.7s 1.7s 1 ease-in-out;
-    animation: zhanyunqi 1.7s 1.7s 1 ease-in-out;
-    -webkit-transform: translate(0, -2.19rem) scale(.7);
-    transform: translate(0, -2.19rem) scale(.7);
+    -webkit-animation: zhanyunqi 1.7s 1.7s ease-in-out;
+    animation: zhanyunqi 1.7s 1.7s ease-in-out;
 }
 
 .popup-mask {
