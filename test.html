@@ -11,6 +11,8 @@
       name="format-detection"
       content="telephone=no,email=no,date=no,address=no"
     />
+    <link rel="preload" href="./test/coin.gif" as="image" type="image/gif" />
+    <link rel="preload" href="./test/coin-shadow.png" as="image" type="image/png" />
     <script src="./test/jquery-3.6.0.min.js"></script>
     <script>
       (function () {
@@ -32,41 +34,41 @@
     <link rel="stylesheet" href="./test/index.css" />
     <link rel="stylesheet" href="./test/optional.css" />
     <style>
-        .btns {
-            text-align: right;
-
-        }
-        #btn1, #btn2 {
-            margin-right: 10px;
-            width: 80px;
-            height: 50px;
-        }
+      .btns {
+        text-align: right;
+      }
+      #btn1,
+      #btn2 {
+        margin-right: 10px;
+        width: 80px;
+        height: 50px;
+      }
     </style>
   </head>
   <body ontouchstart="">
     <main class="page-content">
       <div class="content">
         <div class="btns">
-            <button id="btn1">原版</button>
-            <button id="btn2">新版</button>
+          <button id="btn1">原版</button>
+          <button id="btn2">新版</button>
         </div>
         <div class="popup-mask" style="display: none"></div>
         <div id="pop1" class="popup-success-coins" style="display: none">
-            <div class="title">恭喜获得</div>
-            <div class="prd-name">
-              <div class="num">100</div>
-              <div class="type-name">买单币</div>
-            </div>
+          <div class="title">恭喜获得</div>
+          <div class="prd-name">
+            <div class="num">100</div>
+            <div class="type-name">买单币</div>
+          </div>
         </div>
         <div id="pop2" class="popup-success-coins" style="display: none">
-            <div class="wrapper">
-               <div class="title">恭喜获得</div>
-               <div class="prd-name">
-                 <div class="num">200</div>
-                 <div class="type-name">买单币</div>
-               </div>
+          <div class="wrapper">
+            <div class="title">恭喜获得</div>
+            <div class="prd-name">
+              <div class="num">200</div>
+              <div class="type-name">买单币</div>
             </div>
-           </div>
+          </div>
+        </div>
       </div>
     </main>
     <script>
