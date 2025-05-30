@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>日日签</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <meta
+      name="format-detection"
+      content="telephone=no,email=no,date=no,address=no"
+    />
+    <script src="./test/jquery-3.6.0.min.js"></script>
+    <script>
+      (function () {
+        var w = Math.min(
+          document.documentElement.clientWidth,
+          document.documentElement.clientHeight
+        );
+        document.documentElement.style.fontSize = w / 7.5 + "px";
+        window.addEventListener("resize", function () {
+          w = Math.min(
+            document.documentElement.clientWidth,
+            document.documentElement.clientHeight
+          );
+          document.documentElement.style.fontSize = w / 7.5 + "px";
+        });
+      })();
+    </script>
+    <link rel="stylesheet" type="text/css" href="./test/common-3.0.css" />
+    <link rel="stylesheet" href="./test/index.css" />
+    <link rel="stylesheet" href="./test/optional.css" />
+    <style>
+        .btns {
+            text-align: right;
+
+        }
+        #btn1, #btn2 {
+            margin-right: 10px;
+            width: 80px;
+            height: 50px;
+        }
+    </style>
+  </head>
+  <body ontouchstart="">
+    <main class="page-content">
+      <div class="content">
+        <div class="btns">
+            <button id="btn1">原版</button>
+            <button id="btn2">新版</button>
+        </div>
+        <div class="popup-mask" style="display: none"></div>
+        <div id="pop1" class="popup-success-coins" style="display: none">
+            <div class="title">恭喜获得</div>
+            <div class="prd-name">
+              <div class="num">100</div>
+              <div class="type-name">买单币</div>
+            </div>
+        </div>
+        <div id="pop2" class="popup-success-coins" style="display: none">
+            <div class="wrapper">
+               <div class="title">恭喜获得</div>
+               <div class="prd-name">
+                 <div class="num">200</div>
+                 <div class="type-name">买单币</div>
+               </div>
+            </div>
+           </div>
+      </div>
+    </main>
+    <script>
+      $("body").on("animationend", "#pop1", function (e) {
+        if ($("#pop1").hasClass("hide")) {
+          $("#pop1, .popup-mask").hide();
+        } else if ($("#pop1").hasClass("show")) {
+          setTimeout(function () {
+            $("#pop1").removeClass("show").addClass("hide");
+          }, 600);
+        }
+      });
+      $("body").on("animationend", "#pop2 .wrapper", function (e) {
+        if ($("#pop2 .wrapper").hasClass("hide")) {
+          $("#pop2, .popup-mask").hide();
+        } else if ($("#pop2 .wrapper").hasClass("show")) {
+          setTimeout(function () {
+            $("#pop2 .wrapper").removeClass("show").addClass("hide");
+          }, 600);
+        }
+      });
+      $("#btn1").on("click", function () {
+        showCoinPopUp();
+      });
+      $("#btn2").on("click", function () {
+        showCoinPopUp2();
+      });
+      //金币弹窗显示
+      function showCoinPopUp() {
+        $(".popup-mask, #pop1").show(0);
+        $("#pop1").removeClass("hide").addClass("show");
+      }
+      function showCoinPopUp2() {
+        $(".popup-mask, #pop2").show(0);
+        $(" #pop2 .wrapper").removeClass("hide").addClass("show");
+      }
+    </script>
+  </body>
+</html>

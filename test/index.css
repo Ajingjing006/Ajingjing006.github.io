@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+body {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation
+}
+
+.page-content .content {
+    position: relative;
+    padding-bottom: .48rem
+}
+
+.popup-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background: #000
+}
+
+.popup-success-coins {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: url(./coin.gif) center bottom/2.54rem 2.22rem no-repeat, url(./coin-shadow.png) center bottom -.25rem/2.54rem .9rem no-repeat;
+    padding-bottom: 2.58rem
+}
+
+.popup-success-coins.show {
+    -webkit-animation: showcoin .6s linear;
+    animation: showcoin .6s linear
+}
+
+.popup-success-coins.hide {
+    -webkit-animation: hidecoin 450ms linear forwards;
+    animation: hidecoin 450ms linear forwards
+}
+
+.popup-success-coins .title {
+    font-family: "Source Han Sans CN";
+    font-size: .34rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 600
+}
+
+.popup-success-coins .prd-name {
+    margin-top: .19rem;
+    font-family: "Source Han Sans CN";
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.popup-success-coins .prd-name .num {
+    font-size: .6rem;
+    height: .6rem;
+    line-height: .6rem
+}
+
+.popup-success-coins .prd-name .type-name {
+    font-size: .52rem;
+    height: .52rem;
+    line-height: .52rem
+}
+
+@-webkit-keyframes showcoin {
+    0% {
+        -webkit-transform: translateY(-50%) scale(0);
+        transform: translateY(-50%) scale(0);
+        opacity: 0
+    }
+
+    1% {
+        -webkit-transform: translateY(-50%) scale(.01);
+        transform: translateY(-50%) scale(.01);
+        opacity: 1
+    }
+
+    33% {
+        -webkit-transform: translateY(-50%) scale(1.1);
+        transform: translateY(-50%) scale(1.1);
+        opacity: 1
+    }
+
+    75% {
+        -webkit-transform: translateY(-50%) scale(.97);
+        transform: translateY(-50%) scale(.97);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translateY(-50%) scale(1);
+        transform: translateY(-50%) scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes showcoin {
+    0% {
+        -webkit-transform: translateY(-50%) scale(0);
+        transform: translateY(-50%) scale(0);
+        opacity: 0
+    }
+
+    1% {
+        -webkit-transform: translateY(-50%) scale(.01);
+        transform: translateY(-50%) scale(.01);
+        opacity: 1
+    }
+
+    33% {
+        -webkit-transform: translateY(-50%) scale(1.1);
+        transform: translateY(-50%) scale(1.1);
+        opacity: 1
+    }
+
+    75% {
+        -webkit-transform: translateY(-50%) scale(.97);
+        transform: translateY(-50%) scale(.97);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translateY(-50%) scale(1);
+        transform: translateY(-50%) scale(1);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes hidecoin {
+    0% {
+        -webkit-transform: translateY(-50%) scale(1);
+        transform: translateY(-50%) scale(1);
+        opacity: 1
+    }
+
+    44% {
+        -webkit-transform: translateY(-50%) scale(1.1);
+        transform: translateY(-50%) scale(1.1);
+        opacity: 1
+    }
+
+    99% {
+        -webkit-transform: translateY(-50%) scale(0);
+        transform: translateY(-50%) scale(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translateY(-50%) scale(0);
+        transform: translateY(-50%) scale(0);
+        opacity: 0
+    }
+}
+
+@keyframes hidecoin {
+    0% {
+        -webkit-transform: translateY(-50%) scale(1);
+        transform: translateY(-50%) scale(1);
+        opacity: 1
+    }
+
+    44% {
+        -webkit-transform: translateY(-50%) scale(1.1);
+        transform: translateY(-50%) scale(1.1);
+        opacity: 1
+    }
+
+    99% {
+        -webkit-transform: translateY(-50%) scale(0);
+        transform: translateY(-50%) scale(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translateY(-50%) scale(0);
+        transform: translateY(-50%) scale(0);
+        opacity: 0
+    }
+}

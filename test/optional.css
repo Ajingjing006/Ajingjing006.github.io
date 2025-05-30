@@ -1,0 +1,137 @@
+#pop2 {
+    background: none;
+    padding-bottom: 0;
+}
+
+.wrapper {
+    position: relative;
+    background: url(./coin.gif) center bottom/2.54rem 2.22rem no-repeat, url(./coin-shadow.png) center bottom -.25rem/2.54rem .9rem no-repeat;
+    padding-bottom: 2.58rem;
+    transform-origin: center center;
+}
+
+.wrapper.show {
+    -webkit-animation: scalpop .6s linear;
+    animation: scalpop .6s linear
+}
+
+.wrapper.hide {
+    -webkit-animation: reverscalpop 450ms linear forwards;
+    animation: reverscalpop 450ms linear forwards
+}
+
+@-webkit-keyframes scalpop {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0
+    }
+
+    1% {
+        -webkit-transform: scale(.01);
+        transform: scale(.01);
+        opacity: 1
+    }
+
+    33% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        opacity: 1
+    }
+
+    75% {
+        -webkit-transform: scale(.97);
+        transform: scale(.97);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes scalpop {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0
+    }
+
+    1% {
+        -webkit-transform: scale(.01);
+        transform: scale(.01);
+        opacity: 1
+    }
+
+    33% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        opacity: 1
+    }
+
+    75% {
+        -webkit-transform: scale(.97);
+        transform: scale(.97);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes reverscalpop {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+
+    44% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        opacity: 1
+    }
+
+    99% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0
+    }
+}
+
+@keyframes reverscalpop {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+
+    44% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        opacity: 1
+    }
+
+    99% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0
+    }
+}
