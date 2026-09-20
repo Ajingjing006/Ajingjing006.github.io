@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试轮播消息</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .head-note-msg {
+            background: #fff2e3;
+            font-family: "PingFang SC";
+            font-size: 0.28rem;
+            color: #ff790d;
+            height: 0.8rem;
+            line-height: 0.8rem;
+            text-decoration: none;
+            display: block;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            position: relative;
+
+            .msg-container {
+                position: relative;
+                white-space: nowrap;
+            }
+        }
+
+        .head-note-msg .msg-container.swip span {
+            position: absolute;
+            top: 0;
+        }
+    </style>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/vconsole.min.js"></script>
+    <script>
+        const vConsole = new VConsole();
+    </script>
+</head>
+
+<body>
+    <div class="head-note-msg">
+        <div class="msg-container">
+            <span class="inner">公告公告公告1</span>
+        </div>
+    </div>
+    <script>
+        (() => {
+            const setBaseFontSize = () => {
+                const w = Math.min(document.documentElement.clientWidth, document.documentElement.clientHeight);
+                document.documentElement.style.fontSize = `${w / 7.5}px`;
+            };
+            window.addEventListener('resize', setBaseFontSize);
+            setBaseFontSize();
+        })();
+    </script>
+    <script>
+        $(() => {
+            switchText();
+            function switchText() {
+                const messageContainer = document.querySelector(".msg-container");
+                const fontsize = +document.documentElement.style["font-size"].replace("px", "");
+                const needswip = messageContainer.scrollWidth > 7 * fontsize;
+                console.log("fontsize", fontsize);
+                console.log("needswip", needswip);
+                console.log("scrollWidth", messageContainer.scrollWidth);
+                console.log("w", 7 * fontsize);
+                if (needswip) {
+                    const distance = 1.3;//每次移动距离
+                    const gap = 20;//两轮间距
+                    $(messageContainer).addClass("swip");
+                    const node1 = $(messageContainer).find(".inner");
+                    const node2 = $("<span>" + node1.text() + "</span>");
+                    const nodew = node1.width();//节忐宽度值
+                    let node1Left = fontsize * 0.25;
+                    let node2Left = node1Left + nodew + gap;
+                    node2.attr("data-left", "0");
+                    $(messageContainer).append(node2);
+                    //无缝切换函数
+                    (function loopFn() {
+                        node1Left -= distance;
+                        if (node1Left < -nodew - gap) {
+                            node1Left = nodew + gap;
+                        }
+                        node1.attr("style", `left:${node1Left / fontsize}rem`);
+
+                        node2Left -= distance;
+                        if (node2Left < -nodew - gap) {
+                            node2Left = nodew + gap;
+                        }
+                        node2.attr("style", `left:${node2Left / fontsize}rem`);
+                        setTimeout(loopFn, 16.6);
+                    })();
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
