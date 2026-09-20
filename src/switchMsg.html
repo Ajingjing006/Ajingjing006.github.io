@@ -64,7 +64,7 @@
             function switchText() {
                 const messageContainer = document.querySelector(".msg-container");
                 const fontsize = +document.documentElement.style["font-size"].replace("px", "");
-                const needswip = messageContainer.scrollWidth > 7 * fontsize + 2;
+                const needswip = messageContainer.scrollWidth > 7 * fontsize + 2; // 2px用来修正因fontsize计算时的小数误差导致的计算偏差，但强行增加2会引入额外风险(文字右侧可能更贴近屏幕边沿,但又因提前有padding不会出现文字遮挡)
                 console.log("fontsize", fontsize);
                 console.log("needswip", needswip);
                 console.log("scrollWidth", messageContainer.scrollWidth);
