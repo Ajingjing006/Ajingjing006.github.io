@@ -64,7 +64,7 @@
             function switchText() {
                 const messageContainer = document.querySelector(".msg-container");
                 const fontsize = +document.documentElement.style["font-size"].replace("px", "");
-                const needswip = messageContainer.scrollWidth > 7 * fontsize;
+                const needswip = messageContainer.scrollWidth > 7 * fontsize + 2;
                 console.log("fontsize", fontsize);
                 console.log("needswip", needswip);
                 console.log("scrollWidth", messageContainer.scrollWidth);
